@@ -11,6 +11,7 @@ Ini merupakan sebuah aplikasi dasar yang memiliki fungsi CRUD (Create, Read, Upd
 
 Aplikasi diatas adalah aplikasi pencatatan data siswa yang terdiri dari input, nis (nomor induk siswa), nama, alamat, jenis kelamin, tempat dan tanggal lahir, agama dan nomor telepon.
 
-Saya sudah menyiapkan link struktur database yang telah saya siapkan untuk mempermudah anda mencoba aplikasi ini. Silahkan download file sql yang telah saya siapkan dengan klik link dibawah ini.
+<p align="center"><img src="https://i1026.photobucket.com/albums/y329/muchammad_syam/Screenshot%20from%202018-11-22%2011-21-51_zps4pa2nqvb.png"></p>
 
-https://drive.google.com/open?id=15wNgR4F993YRcI68cxE62nRLdaZ1VLxl
+Aplikasi diatas sudah saya upload disini.
+<b>Demo : https://iflow.id/laravela/siswa</b>
