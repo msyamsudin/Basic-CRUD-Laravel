@@ -14,3 +14,5 @@ Aplikasi diatas adalah aplikasi pencatatan data siswa yang terdiri dari input, n
 Saya sudah menyiapkan link struktur database yang telah saya siapkan untuk mempermudah anda mencoba aplikasi ini. Silahkan download file sql yang telah saya siapkan dengan klik link dibawah ini.
 
 https://drive.google.com/open?id=15wNgR4F993YRcI68cxE62nRLdaZ1VLxl
+
+<p align="center"><img src="https://lh3.googleusercontent.com/uvdb0bNWAR_OXKN3H_QHr30vRMHT7atCJtBAuCZlud2tYYg-Z4w_NX-2wYTtm56GO90JjXWKbKoSFw=w1366-h638-rw"></p>
