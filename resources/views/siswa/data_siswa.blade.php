@@ -23,9 +23,6 @@ Data Siswa
             <th>Nama</th>
             <th>TTL</th>
             <th>Jenis Kelamin</th>
-            <th>Agama</th>
-            <th>Alamat</th>
-            <th>Nomor HP</th>
             <th>Opsi</th>
         </tr>
     </thead>
@@ -36,9 +33,6 @@ Data Siswa
                 <td>{{ $a->nama }}</td>
                 <td>{{ $a->tempat_lahir.', '.$a->tgl_lahir }}</td>
                 <td>{{ $a->jenis_kelamin }}</td>
-                <td>{{ $a->agama }}</td>
-                <td>{{ $a->alamat }}</td>
-                <td>{{ $a->hp }}</td>
                 <td>
                     <div class="btn-group">
                         <a href="{{ url('siswa/'.$a->id) }}" class="fa fa-edit btn btn-primary btn-sm"> View</a>
