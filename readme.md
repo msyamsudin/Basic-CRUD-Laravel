@@ -15,4 +15,4 @@ Saya sudah menyiapkan link struktur database yang telah saya siapkan untuk mempe
 
 https://drive.google.com/open?id=15wNgR4F993YRcI68cxE62nRLdaZ1VLxl
 
-<p align="center"><img src="https://lh3.googleusercontent.com/uvdb0bNWAR_OXKN3H_QHr30vRMHT7atCJtBAuCZlud2tYYg-Z4w_NX-2wYTtm56GO90JjXWKbKoSFw=w1366-h638-rw"></p>
+<p align="center"><img src="https://i1026.photobucket.com/albums/y329/muchammad_syam/Screenshot%20from%202018-11-22%2011-21-51_zps4pa2nqvb.png"></p>
