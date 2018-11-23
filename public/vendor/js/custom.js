@@ -28,20 +28,12 @@ $(document).ready(function(){
 
 
     // Konfirmasi hapus
-    $(".btn-hapus").click(function(){
-        $( "#konfirmasi-hapus" ).dialog({
-          resizable: false,
-          height: "auto",
-          width: 400,
-          modal: true,
-          buttons: {
-            "Ya": function() {
-              $("#frm-hapus").submit()
-            },
-            "Tidak": function() {
-              $( this ).dialog( "close" );
-            }
-          }
-        });
-    }); 
+    $('.btn-hapus').click( function(){
+      var url = $(this).attr('data-url');
+      // console.log(url);
+      // $('#formHapusData input[name="id"]').val(url);
+      $('#formHapusData').attr('action', url);
+      
+      // $("#modalKonfirmasiLabel").html('coba ubah');
+    });
 });
