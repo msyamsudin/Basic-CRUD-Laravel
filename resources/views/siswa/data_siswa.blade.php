@@ -7,7 +7,7 @@ Data Siswa
 @section('konten')
     <div class="container">
         <br>
-            <h1>Data Siswa</h1>
+            <h1>Daftar Data Siswa</h1>
         <br>
     </div>
 
@@ -37,7 +37,7 @@ Data Siswa
                     <div class="btn-group">
                         <a href="{{ url('siswa/'.$a->id) }}" class="fa fa-eye btn btn-primary btn-sm"> View</a>
                         <a href="{{ url('siswa/'.$a->id.'/edit') }}" class="fa fa-edit btn btn-primary btn-sm"> Edit</a>
-                        <a href="#" class="fa fa-trash btn btn-danger btn-sm btn-hapus" data-url="{{ url('siswa/'.$a->id) }}" data-toggle="modal" data-target="#modalKonfirmasi"> Hapus</a>
+                        <a href="#" class="fa fa-trash btn btn-danger btn-sm btn-hapus" data-url="{{ url('siswa/'.$a->id) }}" data-nis="{{ $a->nis }}" data-nama="{{ $a->nama }}" data-toggle="modal" data-target="#modalKonfirmasi"> Hapus</a>
                     </div>
                 </td>
             </tr>
@@ -63,7 +63,7 @@ Data Siswa
         </button>
       </div>
       <div class="modal-body">
-        Anda akan menghapus data ini, lanjutkan?
+        <p id="pesanCustomJS"></p>
         
         <form id="formHapusData" action="" method="post">
           {{ csrf_field() }}

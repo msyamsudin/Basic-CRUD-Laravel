@@ -29,11 +29,13 @@ $(document).ready(function(){
 
     // Konfirmasi hapus
     $('.btn-hapus').click( function(){
+      var nis = $(this).attr('data-nis');
+      var nama = $(this).attr('data-nama');
       var url = $(this).attr('data-url');
       // console.log(url);
       // $('#formHapusData input[name="id"]').val(url);
       $('#formHapusData').attr('action', url);
-      
+      $('#pesanCustomJS').html('Anda akan menghapus nis '+nis+' atas nama '+nama+'. Lanjutkan ?')
       // $("#modalKonfirmasiLabel").html('coba ubah');
     });
 });
