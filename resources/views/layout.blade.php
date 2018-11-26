@@ -9,11 +9,12 @@
         <link href="{{ asset('vendor/css/style-custom.css') }}" rel="stylesheet">
         <link href="{{ asset('vendor/jquery-ui/jquery-ui.min.css') }}" rel="stylesheet">
         <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('vendor/bootstrap/css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
         <link href="{{ asset('vendor/fontawesome/css/all.min.css') }}" rel="stylesheet">
 
         <script src="{{ asset('vendor/js/jquery-3.3.1.min.js') }}"></script>
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('vendor/jquery-ui/jquery-ui.min.js') }}"></script>
+        <script src="{{ asset('vendor/bootstrap/js/bootstrap-datepicker.min.js') }}"></script>
 
         <script src="{{ asset('vendor/js/custom.js') }}"></script>
 

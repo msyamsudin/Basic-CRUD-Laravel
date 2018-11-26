@@ -21,9 +21,7 @@ $(document).ready(function(){
       }); 
 
       $( ".datepicker" ).datepicker({
-        changeMonth: true,
-        changeYear: true,
-        dateFormat: 'dd/mm/yy'
+        format: "dd/mm/yyyy"
       });
 
 
