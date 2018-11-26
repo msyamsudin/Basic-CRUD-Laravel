@@ -19,6 +19,27 @@ class SiswaController extends Controller
    }
 
    public function store(Request $request){
+
+        $rules = [
+            "nis"           => 'required | min:10 | max:10',
+            "nama"          => 'required',
+            "tempat_lahir"  => 'required',
+            "tgl_lahir"     => 'required',
+            "jenis_kelamin" => 'required',
+            "agama"         => 'required',
+            "alamat"        => 'required',
+            "hp"            => 'required | numeric'
+        ];
+
+        $customMessages = [
+            'required'  => 'Kolom :attribute tidak boleh kosong',
+            'unique'    => ':attribute sudah digunakan',
+            'min'       => 'Kolom :attribute tidak boleh kurang dari :min karakter',
+            'max'       => 'Kolom :attribute tidak boleh lebih dari :max karakter',
+        ];
+
+        $request->validate($rules, $customMessages);
+
         Siswa::create($request->all());
         return redirect('siswa');
    }
