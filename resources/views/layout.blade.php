@@ -12,7 +12,7 @@
         <link href="{{ asset('vendor/fontawesome/css/all.min.css') }}" rel="stylesheet">
 
         <script src="{{ asset('vendor/js/jquery-3.3.1.min.js') }}"></script>
-        <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('vendor/jquery-ui/jquery-ui.min.js') }}"></script>
 
         <script src="{{ asset('vendor/js/custom.js') }}"></script>

@@ -35,7 +35,7 @@ $(document).ready(function(){
       // console.log(url);
       // $('#formHapusData input[name="id"]').val(url);
       $('#formHapusData').attr('action', url);
-      $('#pesanCustomJS').html('Anda akan menghapus nis '+nis+' atas nama '+nama+'. Lanjutkan ?')
+      $('#pesanHapusCustomJS').html('Anda akan menghapus nis '+nis+' atas nama '+nama+'. Lanjutkan ?')
       // $("#modalKonfirmasiLabel").html('coba ubah');
     });
 });

@@ -21,8 +21,6 @@ Data Siswa
         <tr>
             <th>NIS</th>
             <th>Nama</th>
-            <th>TTL</th>
-            <th>Jenis Kelamin</th>
             <th>Opsi</th>
         </tr>
     </thead>
@@ -31,8 +29,6 @@ Data Siswa
             <tr>
                 <th scope="row">{{ $a->nis }}</th>
                 <td>{{ $a->nama }}</td>
-                <td>{{ $a->tempat_lahir.', '.$a->tgl_lahir }}</td>
-                <td>{{ $a->jenis_kelamin }}</td>
                 <td>
                     <div class="btn-group">
                         <a href="{{ url('siswa/'.$a->id) }}" class="fa fa-eye btn btn-primary btn-sm"> View</a>
@@ -46,12 +42,6 @@ Data Siswa
     </table>
 </div>
 
-<div id="konfirmasi-hapus" title="Hapus data" style="display: none;">
-  <p>
-    Anda akan menghapus data ini, lanjutkan?
-  </p>
-</div>
-
 <!-- Konfirmasi hapus -->
 <div class="modal fade" id="modalKonfirmasi" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -63,7 +53,7 @@ Data Siswa
         </button>
       </div>
       <div class="modal-body">
-        <p id="pesanCustomJS"></p>
+        <p id="pesanHapusCustomJS"></p>
         
         <form id="formHapusData" action="" method="post">
           {{ csrf_field() }}
