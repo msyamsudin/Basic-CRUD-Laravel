@@ -10,8 +10,9 @@ Tambah Siswa
     <form action="{{ url('siswa') }}" method="post">
         {{ csrf_field() }}
     <div class="form-group">
-        <label>NIS</label>
-        <input type="number" class="form-control" name="nis" id="nis" data-toggle="tooltip" data-placement="bottom" title="Nomor Induk Siswa" value="{{ old('nis') }}">
+        <label>NISN</label>
+        <input type="number" class="form-control" name="nis" id="nis" data-toggle="tooltip" data-placement="bottom" title="Nomor Induk Siswa | Masukkan 10 angka NISN" value="{{ old('nis') }}">
+        <p class="font-weight-bold text-danger small validasi-nis"></p>
         <?php if ($errors->has('nis')); ?>
         <p class="font-weight-bold text-danger small">{{ $errors->first('nis') }}</p>
     </div>

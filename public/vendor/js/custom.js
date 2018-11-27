@@ -1,4 +1,24 @@
+var minLength = 10;
+var maxLength = 10;
+
 $(document).ready(function(){
+
+      // Validasi form NISN
+      $('#nis').on('keydown keyup change', function(){
+        var char = $(this).val();
+        var charLength = $(this).val().length;
+        if(charLength < minLength){
+            $('p.validasi-nis').text('Terlalu pendek, minimal '+minLength+' karakter diperlukan.');
+            $("#nis").addClass('is-invalid');
+        }else if(charLength > maxLength){
+            $('p.validasi-nis').text('Terlalu panjang, maksimal '+maxLength+' karakter diperlukan.');
+            $("#nis").addClass('is-invalid');
+            // $(this).val(char.substring(0, maxLength));
+        }else{
+            $('p.validasi-nis').text('');
+            $("#nis").removeClass('is-invalid');
+        }
+    });
 
       $(".btn-gender").click(function(){
         $(".gender").toggle(500);
