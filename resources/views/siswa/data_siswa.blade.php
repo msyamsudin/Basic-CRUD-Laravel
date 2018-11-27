@@ -16,7 +16,7 @@ Data Siswa
     </div>
 
 <div class="container">
-    <table class="table table-hover table-dark text-center">
+    <table class="table table-hover table-dark text-center" id="tabelSaya">
     <thead>
         <tr>
             <th>NIS</th>

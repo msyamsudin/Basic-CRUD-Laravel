@@ -15,9 +15,7 @@
         <script src="{{ asset('vendor/js/jquery-3.3.1.min.js') }}"></script>
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('vendor/bootstrap/js/bootstrap-datepicker.min.js') }}"></script>
-
         <script src="{{ asset('vendor/js/custom.js') }}"></script>
-
 </head>
 <body>
 
