@@ -13,5 +13,15 @@ Aplikasi diatas adalah aplikasi pencatatan data siswa yang terdiri dari input, n
 
 <p align="center"><img src="https://i1026.photobucket.com/albums/y329/muchammad_syam/Screenshot%20from%202018-11-22%2011-21-51_zps4pa2nqvb.png"></p>
 
-Aplikasi diatas sudah saya upload disini.
+**Note:**
+Alasan kenapa **NISN hanya 10 digit.**
+NISN menggunakan format seperti ini **aaaxxxyyyy**
+
+- aaa : Tiga digit tahun lahir
+- xxxyyyy : Tujuh digit nomor urut yang dibagi dalam 2 bagian, yaitu:
+- xxx : Tiga digit pengelompokan, dan
+- yyyy : Empat digit nomor urut dalam pengelompokan xxx.
+
+Karena aturan diatas, saya menyesuaikan aplikasi ini agar user hanya memasukkan 10 digit angka pada kolom NIS aplikasi.
+
 <b>Demo : https://iflow.id/laravela/siswa</b>
