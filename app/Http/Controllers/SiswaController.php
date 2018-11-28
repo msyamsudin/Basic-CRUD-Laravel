@@ -9,8 +9,7 @@ use App\Siswa;
 class SiswaController extends Controller
 {
    public function index(){
-    // select * from siswa
-       $data = Siswa::all();
+       $data = Siswa::paginate(5);
        return view('siswa.data_siswa')->with('data',$data);
    }
 

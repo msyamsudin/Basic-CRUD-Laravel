@@ -13,8 +13,6 @@ Data Siswa
         <a href="{{ url('/siswa/create') }}" class="far fa-plus-square btn btn-success"  data-toggle="tooltip" data-placement="top" title="Tambah data siswa"></a>
     </div><br><br>
         
-
-    
     <table class="table table-hover table-dark text-center" id="tabelSaya">
     <thead>
         <tr>
@@ -24,7 +22,8 @@ Data Siswa
         </tr>
     </thead>
     <tbody>
-    @foreach($data as $a)
+    @if(count($result))
+    @foreach($result as $a)
             <tr>
                 <th scope="row">{{ $a->nis }}</th>
                 <td>{{ $a->nama }}</td>
@@ -37,9 +36,16 @@ Data Siswa
                 </td>
             </tr>
     @endforeach
+    @else
+    <tr>
+        <td></td>
+        <td><p class="font-weight-bold text-center">Data tidak ditemukan</p></td>
+        <td></td>
+    </tr>
+    @endif
     </tbody>
     </table>
-    {{ $data->links() }}
+    {{ $result->links() }}
 </div>
 
 <!-- Konfirmasi hapus -->

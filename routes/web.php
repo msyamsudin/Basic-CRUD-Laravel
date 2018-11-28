@@ -17,3 +17,8 @@ Route::get('/', function () {
 
 
 Route::resource('siswa','SiswaController');
+
+Route::get('/result', function () {
+    return redirect('siswa');
+});
+Route::get('result/search', 'SearchController@index')->name('siswa.search');

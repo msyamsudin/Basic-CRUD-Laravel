@@ -13,6 +13,9 @@ Edit Data Siswa
     <div class="form-group">
         <label>NIS</label>
         <input type="text" class="form-control" name="nis" id="nis" value="{{ $data->nis }}">
+        <p class="font-weight-bold text-danger small validasi-nis"></p>
+        <?php if ($errors->has('nis')); ?>
+        <p class="font-weight-bold text-danger small">{{ $errors->first('nis') }}</p>
     </div>
 
     <div class="form-group">
