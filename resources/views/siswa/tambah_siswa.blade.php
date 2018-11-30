@@ -43,7 +43,7 @@ Tambah Siswa
     
     <div class="form-group">
         <label>Jenis kelamin</label>
-        <select class="form-control" name="jenis_kelamin" id="jenis_kelamin" data-toggle="tooltip" data-placement="bottom" title="Jenis Kelamin" value="{{ old('jenis_lekamin') }}">
+        <select class="form-control" name="jenis_kelamin" id="jenis_kelamin" data-toggle="tooltip" data-placement="bottom" title="Jenis Kelamin">
         <option value="">-- Piih --</option>
         <option value="laki-laki">Laki-laki</option>
         <option value="perempuan">Perempuan</option>
@@ -56,7 +56,7 @@ Tambah Siswa
 
     <div class="form-group">
         <label>Agama</label>
-        <select class="form-control" name="agama" id="agama" data-toggle="tooltip" data-placement="bottom" title="Agama" value="{{ old('agama') }}">
+        <select class="form-control" name="agama" id="agama" data-toggle="tooltip" data-placement="bottom" title="Agama">
         <option value="">-- Pilih --</option>
         <option value="Islam">Islam</option>
         <option value="Kristen">Kristen</option>

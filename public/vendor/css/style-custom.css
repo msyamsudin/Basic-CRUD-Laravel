@@ -1,0 +1,18 @@
+/* Hasil autocomplete div id nameList */
+#nameList
+{
+    position: absolute;
+    width: auto; 
+    background: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+
+    border: 0px solid gray;
+
+    /*This is relative to the navbar now*/
+    left: 1;
+    right: 1;
+    top: 40px;
+}
