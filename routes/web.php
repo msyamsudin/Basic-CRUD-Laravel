@@ -24,5 +24,5 @@ Route::get('/result', function () {
 
 Route::get('result/search', 'SearchController@index')->name('siswa.search');
 
-// ajax url autocomplete (custom.js)
+
 Route::post('siswa/fetch', 'SearchController@AutoCompleteFunc')->name('autocomplete.fetch');

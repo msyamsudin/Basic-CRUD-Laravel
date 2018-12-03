@@ -2,31 +2,7 @@ var minLength = 10;
 var maxLength = 10;
 
 $(document).ready(function(){
-
-      // autocomplete
-      $('#search_name').keyup(function(){
-        var query = $(this).val();
-        if (query != '')
-        {
-          var _token = $('input[name="_token"]').val();
-          $.ajax({
-              url:"/siswa/fetch",
-              method: "POST",
-              data : {query:query, _token:_token},
-              success : function(data)
-              {
-                $('#nameList').fadeIn();
-                $('#nameList').html(data);
-              }
-          })
-        }
-      });
-
-      $(document).on('click', 'li', function(){
-        $('#search_name').val($(this).text());
-        $('#nameList').fadeOut();
-      });
-      
+  
       // Validasi form NISN
       $('#nis').on('keydown keyup change', function(){
         var char = $(this).val();

@@ -29,7 +29,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="{{ url('/siswa') }}">Beranda <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{ url('/siswa') }}">Beranda</a>
       </li>
     </ul>
   </div>
@@ -43,9 +43,37 @@
     </div>
     {{ csrf_field() }}
 </nav>
-
     @yield('konten')
     <br>
 <p></p>
 </body>
 </html>
+
+<script>
+        $(document).ready(function(){
+
+        // autocomplete
+        $('#search_name').keyup(function(){
+          var query = $(this).val();
+          if (query != '')
+          {
+            var _token = $('input[name="_token"]').val();
+            $.ajax({
+                url:"{{ route('autocomplete.fetch') }}",
+                method: "POST",
+                data : {query:query, _token:_token},
+                success : function(data)
+                {
+                  $('#nameList').fadeIn();
+                  $('#nameList').html(data);
+                }
+            })
+          }
+        });
+
+          $(document).on('click', 'li', function(){
+            $('#search_name').val($(this).text());
+            $('#nameList').fadeOut();
+          });
+        });
+</script>
