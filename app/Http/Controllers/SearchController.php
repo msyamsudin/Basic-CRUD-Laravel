@@ -19,15 +19,22 @@ class SearchController extends Controller
         {
             $query = $request->get('query');
             $data = Siswa::where('nama', 'LIKE', '%' . $query . '%')->get();
+            $hitung_data = $data->count();
 
-            $output = '<ul class="dropdown-menu position-relative" style="display:block;">';
-            foreach($data as $row)
+            if($hitung_data > 0)
             {
-                $output .= '<li class="dropdown-item">'.$row->nama.'</li>';
-            }
-            $output .= '</ul>';
+                $output = '<ul class="dropdown-menu position-relative" style="display:block;">';
+                foreach($data as $row)
+                {
+                    $output .= '<li class="dropdown-item">'.$row->nama.'</li>';
+                }
+                $output .= '</ul>';
 
-            echo $output;
+                echo $output;
+            } else
+            {
+                // Data tidak ditemukan
+            }
         }
     }
 }

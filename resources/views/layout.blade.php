@@ -68,6 +68,9 @@
                   $('#nameList').html(data);
                 }
             })
+          } else
+          {
+            $('#nameList').fadeOut();
           }
         });
 
