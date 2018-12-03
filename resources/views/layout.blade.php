@@ -75,7 +75,7 @@
         });
 
           $(document).on('click', 'li', function(){
-            $('#search_name').val($(this).text());
+            $('#search_name').val($('#nameList').text());
             $('#nameList').fadeOut();
           });
         });

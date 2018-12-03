@@ -26,7 +26,7 @@ class SiswaController extends Controller
             "tgl_lahir"     => 'required',
             "jenis_kelamin" => 'required',
             "agama"         => 'required',
-            "alamat"        => 'required',
+            "alamat"        => 'required | max:100',
             "hp"            => 'required | numeric'
         ];
 
