@@ -19,7 +19,7 @@ Tambah Siswa
 
     <div class="form-group">
         <label>Nama</label>
-        <input type="text" class="form-control" name="nama" id="nama" data-toggle="tooltip" data-placement="bottom" title="Nama Lengkap Siswa" value="{{ old('nama') }}">
+        <input type="text" class="form-control validasi-nama-alamat" name="nama" id="nama" data-toggle="tooltip" data-placement="bottom" title="Nama Lengkap Siswa" value="{{ old('nama') }}">
 
         <?php if ($errors->has('nama')); ?>
         <p class="font-weight-bold text-danger small">{{ $errors->first('nama') }}</p>
@@ -28,12 +28,12 @@ Tambah Siswa
     <div class="form-row">
         <div class="form-group col-md-3">
         <label>Lahir di</label>
-        <input type="text" class="form-control" name="tempat_lahir" id="tempat_lahir" data-toggle="tooltip" data-placement="bottom" title="Kota Asal Siswa" value="{{ old('tempat_lahir') }}">
+        <input type="text" class="form-control validasi-lahir-hp" name="tempat_lahir" id="tempat_lahir" data-toggle="tooltip" data-placement="bottom" title="Kota Asal Siswa" value="{{ old('tempat_lahir') }}">
         </div>
 
         <div class="form-group col-md-6">
         <label>Tanggal lahir</label>
-        <input type="text" class="form-control datepicker" name="tgl_lahir" id="tgl_lahir" data-toggle="tooltip" data-placement="bottom" title="Tanggal Lahir Siswa" value="{{ old('tgl_lahir') }}">
+        <input type="text" class="form-control datepicker" name="tgl_lahir" id="tgl_lahir" data-toggle="tooltip" data-placement="bottom" title="Tanggal Lahir Siswa" value="{{ old('tgl_lahir') }}" readonly>
         </div>
 
         <?php if ($errors->has('tempat_lahir') || $errors->has('tgl_lahir')); ?>
@@ -72,7 +72,7 @@ Tambah Siswa
 
     <div class="form-group">
         <label>Alamat</label>
-        <textarea class="form-control" name="alamat" id="alamat" rows="3" data-toggle="tooltip" data-placement="bottom" title="Alamat Siswa Sekarang">{{ old('alamat') }}</textarea>
+        <textarea class="form-control validasi-nama-alamat" name="alamat" id="alamat" rows="3" data-toggle="tooltip" data-placement="bottom" title="Alamat Siswa Sekarang">{{ old('alamat') }}</textarea>
 
             <?php if ($errors->has('alamat')); ?>
             <p class="font-weight-bold text-danger small">
@@ -81,7 +81,7 @@ Tambah Siswa
 
     <div class="form-group">
         <label>no. HP</label>
-        <input type="number" class="form-control" name="hp" id="hp" data-toggle="tooltip" data-placement="bottom" title="Nomor Telepon" value="{{ old('hp') }}">
+        <input type="number" class="form-control validasi-lahir-hp" name="hp" id="hp" data-toggle="tooltip" data-placement="bottom" title="Nomor Telepon" value="{{ old('hp') }}">
 
         <?php if ($errors->has('hp')); ?>
         <p class="font-weight-bold text-danger small">

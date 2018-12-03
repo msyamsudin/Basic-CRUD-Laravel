@@ -1,8 +1,11 @@
 var minLengthNISN = 10;
 var maxLengthNISN = 10;
 
-var minLengthAlamat = 0;
-var maxLengthAlamat = 100;
+var minNamaAlamat = 0;
+var maxNamaAlamat = 100;
+
+var minLahirHP = 0;
+var maxLahirHP = 20;
 
 $(document).ready(function(){
 
@@ -47,20 +50,29 @@ $(document).ready(function(){
         format: "dd/mm/yyyy"
       });
 
-      // Validasi form Alamat
-      $('#alamat').on('keydown keyup change', function(){
+      // Validasi form Nama dan Alamat
+      $('.validasi-nama-alamat').on('keydown keyup change', function(){
         var char = $(this).val();
         var charLength = $(this).val().length;
-        if(charLength < minLengthAlamat){
-            $('p.validasi-alamat').text('Terlalu pendek, minimal '+minLengthAlamat+' karakter diperlukan.');
+        if(charLength < minNamaAlamat){
+            $('p.validasi-alamat').text('Terlalu pendek, minimal '+minNamaAlamat+' karakter diperlukan.');
             $("#alamat").addClass('is-invalid');
-        }else if(charLength > maxLengthAlamat){
-            $(this).val(char.substring(0, maxLengthAlamat));
-        }else{
-            $('p.validasi-alamat').text('');
-            $("#alamat").removeClass('is-invalid');
-        }
+        }else if(charLength > maxNamaAlamat){
+            $(this).val(char.substring(0, maxNamaAlamat));
+        }else{}
     });
+
+    // Validasi form Lahir di dan Nomor Hp
+    $('.validasi-lahir-hp').on('keydown keyup change', function(){
+      var char = $(this).val();
+      var charLength = $(this).val().length;
+      if(charLength < minLahirHP){
+          $('p.validasi-hp').text('Terlalu pendek, minimal '+minLahirHP+' karakter diperlukan.');
+          $("#hp").addClass('is-invalid');
+      }else if(charLength > maxLahirHP){
+          $(this).val(char.substring(0, maxLahirHP));
+      }else{}
+  });
 
 
     // Konfirmasi hapus
