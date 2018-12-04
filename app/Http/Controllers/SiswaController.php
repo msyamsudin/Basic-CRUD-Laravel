@@ -56,7 +56,26 @@ class SiswaController extends Controller
    }
 
    public function update(Request $request, $id){
-       // update siswa set .... = .... where id = $id
+    $rules = [
+        "nis"           => 'required | min:10 | max:10',
+        "nama"          => 'required',
+        "tempat_lahir"  => 'required',
+        "tgl_lahir"     => 'required',
+        "jenis_kelamin" => 'required',
+        "agama"         => 'required',
+        "alamat"        => 'required | max:100',
+        "hp"            => 'required | numeric'
+    ];
+
+    $customMessages = [
+        'required'  => 'Kolom :attribute tidak boleh kosong',
+        'unique'    => ':attribute sudah digunakan',
+        'min'       => 'Kolom :attribute tidak boleh kurang dari :min karakter',
+        'max'       => 'Kolom :attribute tidak boleh lebih dari :max karakter',
+    ];
+
+    $request->validate($rules, $customMessages);
+    
        Siswa::find($id)->update($request->all());
        return redirect('siswa');
    }

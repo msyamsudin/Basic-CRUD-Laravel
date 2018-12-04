@@ -20,19 +20,24 @@ Edit Data Siswa
 
     <div class="form-group">
         <label>Nama</label>
-        <input type="text" class="form-control" name="nama" id="nama" value="{{ $data->nama }}">
+        <input type="text" class="form-control validasi-nama-alamat" name="nama" id="nama" value="{{ $data->nama }}">
     </div>
+    <?php if ($errors->has('nama')); ?>
+    <p class="font-weight-bold text-danger small">{{ $errors->first('nama') }}</p>
 
     <div class="form-row">
         <div class="form-group col-md-3">
         <label>Lahir di</label>
-        <input type="text" class="form-control" name="tempat_lahir" id="tempat_lahir" value="{{ $data->tempat_lahir }}">
+        <input type="text" class="form-control validasi-lahir-hp" name="tempat_lahir" id="tempat_lahir" value="{{ $data->tempat_lahir }}">
         </div>
         <div class="form-group col-md-6">
         <label>Tanggal lahir</label>
-        <input type="text" class="form-control datepicker" name="tgl_lahir" id="tgl_lahir" value="{{ $data->tgl_lahir }}">
+        <input type="text" class="form-control datepicker" name="tgl_lahir" id="tgl_lahir" value="{{ $data->tgl_lahir }}" readonly>
         </div>
     </div>
+    <?php if ($errors->has('tgl_lahir')); ?>
+    <p class="font-weight-bold text-danger small">
+    {{ $errors->first('tgl_lahir') }}</p>
     
     <div class="form-group">
         <label>Jenis kelamin : <b>{{ $data->jenis_kelamin }}</b></label>
@@ -46,6 +51,10 @@ Edit Data Siswa
         <option value="laki-laki">Laki-laki</option>
         <option value="perempuan">Perempuan</option>
         </select>
+
+        <?php if ($errors->has('jenis_kelamin')); ?>
+        <p class="font-weight-bold text-danger small">
+        {{ $errors->first('jenis_kelamin') }}</p>
     </div>
 
     <div class="form-group">
@@ -63,16 +72,28 @@ Edit Data Siswa
         <option value="Hindu">Hindu</option>
         <option value="Budha">Budha</option>
         </select>
+
+        <?php if ($errors->has('agama')); ?>
+        <p class="font-weight-bold text-danger small">
+        {{ $errors->first('agama') }}</p>
     </div>
 
     <div class="form-group">
         <label>Alamat</label>
-        <textarea class="form-control" name="alamat" id="alamat" rows="3">{{ $data->alamat }}</textarea>
+        <textarea class="form-control validasi-nama-alamat" name="alamat" id="alamat" rows="3">{{ $data->alamat }}</textarea>
+
+        <?php if ($errors->has('alamat')); ?>
+        <p class="font-weight-bold text-danger small">
+        {{ $errors->first('alamat') }}</p>
     </div>
 
     <div class="form-group">
         <label>no. HP</label>
-        <input type="text" class="form-control" name="hp" id="hp" value="{{ $data->hp }}">
+        <input type="text" class="form-control validasi-lahir-hp" name="hp" id="hp" value="{{ $data->hp }}">
+
+        <?php if ($errors->has('hp')); ?>
+        <p class="font-weight-bold text-danger small">
+        {{ $errors->first('hp') }}</p>
     </div>
     
     <div class="btn-group float-right">

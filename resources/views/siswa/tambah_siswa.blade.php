@@ -36,7 +36,7 @@ Tambah Siswa
         <input type="text" class="form-control datepicker" name="tgl_lahir" id="tgl_lahir" data-toggle="tooltip" data-placement="bottom" title="Tanggal Lahir Siswa" value="{{ old('tgl_lahir') }}" readonly>
         </div>
 
-        <?php if ($errors->has('tempat_lahir') || $errors->has('tgl_lahir')); ?>
+        <?php if ($errors->has('tgl_lahir')); ?>
         <p class="font-weight-bold text-danger small">
         {{ $errors->first('tgl_lahir') }}</p>
     </div>
@@ -74,9 +74,9 @@ Tambah Siswa
         <label>Alamat</label>
         <textarea class="form-control validasi-nama-alamat" name="alamat" id="alamat" rows="3" data-toggle="tooltip" data-placement="bottom" title="Alamat Siswa Sekarang">{{ old('alamat') }}</textarea>
 
-            <?php if ($errors->has('alamat')); ?>
-            <p class="font-weight-bold text-danger small">
-            {{ $errors->first('alamat') }}</p>
+        <?php if ($errors->has('alamat')); ?>
+        <p class="font-weight-bold text-danger small">
+        {{ $errors->first('alamat') }}</p>
     </div>
 
     <div class="form-group">
