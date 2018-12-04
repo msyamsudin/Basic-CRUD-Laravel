@@ -52,31 +52,27 @@
 <script>
         $(document).ready(function(){
 
-        // autocomplete
-        $('#search_name').keyup(function(){
-          var query = $(this).val();
-          if (query != '')
-          {
-            var _token = $('input[name="_token"]').val();
-            $.ajax({
-                url:"{{ route('autocomplete.fetch') }}",
-                method: "POST",
-                data : {query:query, _token:_token},
-                success : function(data)
-                {
-                  $('#nameList').fadeIn();
-                  $('#nameList').html(data);
-                }
-            })
-          } else
-          {
-            $('#nameList').fadeOut();
-          }
-        });
-
-          $(document).on('click', 'li', function(){
-            $('#search_name').val($('#nameList').text());
-            $('#nameList').fadeOut();
+          // autocomplete
+          $('#search_name').keyup(function(){
+            var query = $(this).val();
+            if (query != '')
+            {
+              var _token = $('input[name="_token"]').val();
+              $.ajax({
+                  url:"{{ route('autocomplete.fetch') }}",
+                  method: "POST",
+                  data : {query:query, _token:_token},
+                  success : function(data)
+                  {
+                    $('#nameList').fadeIn();
+                    $('#nameList').html(data);
+                  }
+              })
+              selectSearch();
+            } else
+            {
+              $('#nameList').fadeOut();
+            }
           });
         });
 </script>

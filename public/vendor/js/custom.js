@@ -87,3 +87,11 @@ $(document).ready(function(){
       // $("#modalKonfirmasiLabel").html('coba ubah');
     });
 });
+
+function selectSearch()
+{
+  $(document).on('click', 'li', function(){
+    $('#search_name').val($(this).text());
+    $('#nameList').fadeOut();
+  });
+}
