@@ -86,6 +86,35 @@ $(document).ready(function(){
       $('#pesanHapusCustomJS').html('Anda akan menghapus nis '+nis+' atas nama '+nama+'. Lanjutkan ?')
       // $("#modalKonfirmasiLabel").html('coba ubah');
     });
+
+    // sebelum data terpilih
+    $( '.btn-multi-hapus' ).prop( "disabled", true );
+    // Hitung checkbox yang dipilih
+    var $checkboxes = $('#Multiple-delete td input[type="checkbox"]');
+        
+    $checkboxes.change(function(){
+
+      var countCheckBox = $checkboxes.filter(':checked').length;
+        $('#dataTerpilih').html(' '+countCheckBox);
+        $('#count-checked-checkboxes').text(countCheckBox);
+
+        if(countCheckBox < 1)
+        {
+          $( '.btn-multi-hapus' ).prop( "disabled", true );
+          $( '#dataTerpilih' ).prop( "hidden", true );
+        }else{
+          $( '.btn-multi-hapus' ).prop( "disabled", false );
+          $( '#dataTerpilih' ).prop( "hidden", false );
+        }
+        // $('#edit-count-checked-checkboxes').val(countCheckedCheckboxes);
+    });
+
+
+    // Konfirmasi hapus beberapa data
+    $('.btn-multi-hapus').click( function(){
+      var url = $(this).attr('data-url');
+      $('#formHapusData').attr('action', url);
+    });
 });
 
 function selectSearch()
@@ -94,4 +123,8 @@ function selectSearch()
     $('#search_name').val($(this).text());
     $('#nameList').fadeOut();
   });
+}
+
+function submitMultiDelete(){
+  $( "#Multiple-delete" ).submit();
 }

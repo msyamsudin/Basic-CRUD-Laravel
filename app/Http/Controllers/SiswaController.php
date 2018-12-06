@@ -9,7 +9,7 @@ use App\Siswa;
 class SiswaController extends Controller
 {
    public function index(){
-       $data = Siswa::paginate(5);
+       $data = Siswa::paginate(10);
        return view('siswa.data_siswa')->with('data',$data);
    }
 
@@ -83,5 +83,19 @@ class SiswaController extends Controller
    public function destroy($id){
         Siswa::find($id)->delete();
         return redirect('siswa');
+   }
+
+   public function MultipleDataDelete(Request $request){
+       $delmulti = $request->input('delmulti');
+
+       if($delmulti != null)
+       {
+            Siswa::whereIn('id', $delmulti)
+            ->delete();
+            return redirect('siswa');
+            // print_r($delmulti);
+       }else{
+            return redirect('siswa');
+       }
    }
 }

@@ -24,5 +24,8 @@ Route::get('/result', function () {
 
 Route::get('result/search', 'SearchController@index')->name('siswa.search');
 
-
+// autocomplete search route
 Route::post('siswa/fetch', 'SearchController@AutoCompleteFunc')->name('autocomplete.fetch');
+
+// multiple delete data route
+Route::post('delete/multiple', 'SiswaController@MultipleDataDelete')->name('multipledeletedata');
