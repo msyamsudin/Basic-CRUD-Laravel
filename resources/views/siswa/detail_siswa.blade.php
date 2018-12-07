@@ -6,7 +6,7 @@ Detail Siswa
 
 @section('konten')
 <br>
-<h2 class="text-center">Detail Siswa</h2>
+<h2 class="text-center mt-5">Detail Siswa</h2>
 <br>
 <div class="container justify-content-center col-5 border border-dark rounded">
     <form>

@@ -9,7 +9,7 @@ class SearchController extends Controller
 {
     public function index(Request $request){
         $search = $request->get('q');
-        $result = Siswa::where('nama', 'LIKE', '%' . $search . '%')->paginate(5);
+        $result = Siswa::where('nama', 'LIKE', '%' . $search . '%')->paginate(10);
 
         return view('siswa.search_result', compact('search','result'));
     }

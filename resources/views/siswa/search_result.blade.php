@@ -5,7 +5,7 @@ Data Siswa
 @endsection
 
 @section('konten')
-<div class="container">
+<div class="container mt-5">
     <br>
         <h1>Daftar Data Siswa</h1>
 
@@ -45,7 +45,7 @@ Data Siswa
     @endif
     </tbody>
     </table>
-    {{ $result->links() }}
+    {{ $result->appends($_GET)->links() }}
 </div>
 
 <!-- Konfirmasi hapus -->

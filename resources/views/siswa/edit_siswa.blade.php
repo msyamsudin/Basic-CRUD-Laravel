@@ -6,7 +6,7 @@ Edit Data Siswa
 
 @section('konten')
 <br>
-<div class="container justify-content-center col-5">
+<div class="container justify-content-center col-5 mt-5">
     <form action="{{ url('siswa/'.$data->id) }}" method="post">
     <input type="hidden" name="_method" value="put">
         {{ csrf_field() }}

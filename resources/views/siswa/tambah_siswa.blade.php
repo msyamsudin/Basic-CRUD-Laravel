@@ -6,7 +6,7 @@ Tambah Siswa
 
 @section('konten')
 <br>
-<div class="container justify-content-center col-5">
+<div class="container justify-content-center col-5 mt-5">
     <form action="{{ url('siswa') }}" method="post">
         {{ csrf_field() }}
     <div class="form-group">
@@ -88,7 +88,10 @@ Tambah Siswa
         {{ $errors->first('hp') }}</p>
     </div>
 
-    <input type="submit" class="float-right btn btn-primary btn-sm" value="Submit" readonly>
+    <div class="btn-group float-right">
+    <input type="submit" class="float-right btn btn-success btn-sm" value="Submit" readonly>
+        <a href="{{ url('siswa') }}" class="btn btn-danger btn-sm">Cancel</a>
+    </div>
     </form>
 </div>
 @endsection
