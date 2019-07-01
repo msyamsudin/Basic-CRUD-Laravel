@@ -24,4 +24,4 @@ NISN menggunakan format seperti ini **aaaxxxyyyy**
 
 Karena aturan diatas, saya menyesuaikan aplikasi ini agar user hanya memasukkan 10 digit angka pada kolom NIS aplikasi.
 
-<b>Demo : https://iflow.id/laravela/siswa</b>
+<b>Demo : https://syam.web.id/laravela/siswa</b>
