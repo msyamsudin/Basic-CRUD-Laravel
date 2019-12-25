@@ -11,7 +11,11 @@ Ini merupakan sebuah aplikasi dasar yang memiliki fungsi CRUD (Create, Read, Upd
 
 Aplikasi diatas adalah aplikasi pencatatan data siswa yang terdiri dari input, nis (nomor induk siswa), nama, alamat, jenis kelamin, tempat dan tanggal lahir, agama dan nomor telepon.
 
-<p align="center"><img src="https://i1026.photobucket.com/albums/y329/muchammad_syam/Screenshot%20from%202018-11-22%2011-21-51_zps4pa2nqvb.png"></p>
+<p align="center"><img src="https://syam.web.id/portofolio/img/Laravel-basic-crud/frontend.png"></p>
+<p align="center"><img src="https://syam.web.id/portofolio/img/Laravel-basic-crud/view.png"></p>
+<p align="center"><img src="https://syam.web.id/portofolio/img/Laravel-basic-crud/Konfirmasi_hapus.png"></p>
+<p align="center"><img src="https://syam.web.id/portofolio/img/Laravel-basic-crud/Edit.png"></p>
+<p align="center"><img src="https://syam.web.id/portofolio/img/Laravel-basic-crud/search_box.png"></p>
 
 **Note:**
 Alasan kenapa **NISN hanya 10 digit.**
@@ -23,5 +27,3 @@ NISN menggunakan format seperti ini **aaaxxxyyyy**
 - yyyy : Empat digit nomor urut dalam pengelompokan xxx.
 
 Karena aturan diatas, saya menyesuaikan aplikasi ini agar user hanya memasukkan 10 digit angka pada kolom NIS aplikasi.
-
-<b>Demo : https://syam.web.id/laravela/siswa</b>
